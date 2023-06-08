@@ -78,6 +78,7 @@ class ViewController: UIViewController {
             progress.isHidden = false
             progress.progress = (Float(bmi) * (100 / 29.9)) / 100
             progress.tintColor = classificationColor
+            
         }
     }
     
@@ -85,6 +86,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progress.isHidden = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }
