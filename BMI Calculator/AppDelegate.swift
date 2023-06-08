@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  BMI Calculator
-//
-//  Created by Vasily_1 on 27.05.2023.
-//
-
 import UIKit
 
 @main
